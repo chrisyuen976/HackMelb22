@@ -38,6 +38,7 @@ const Header = ({ handleLogin, handleSignUp }) => {
     setShowSignUp(!showSignUp);
   }
 
+
   return (
     <>
       <Navbar bg="light" expand="lg">
@@ -60,16 +61,7 @@ const Header = ({ handleLogin, handleSignUp }) => {
                 />
                 <Button variant="outline-success">Search</Button>
               </Form>
-              <Button
-                variant="success"
-                style={{ 
-                  width: "150px",
-                marginLeft: "10px"}}
-                id="createJourney_btn"
-                href="/create-journey"
-              >
-                Create Journey
-              </Button>
+            
             </Nav>
           </Navbar.Collapse>
           <Row>

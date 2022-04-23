@@ -5,14 +5,15 @@ const LoggedSavedJourneyPage = ({ username, journeyList, savedList }) => {
   // get my journey and saved journey
   var myJourneyList = [];
   var savedJourneyList = [];
+
   for (let i in journeyList) {
-    if (journeyList[i].creator === username) {
+    if (journeyList[i].author_name === username) {
       myJourneyList.push(journeyList[i]);
     }
     for (let saved in savedList) {
-      if (journeyList[i].journey_id === savedList[saved].journey_id) {
+      if (journeyList[i]._id === savedList[saved]._id) {
         savedJourneyList.push(journeyList[i]);
-        break;
+       
       }
     }
   }
@@ -39,7 +40,7 @@ const LoggedSavedJourneyPage = ({ username, journeyList, savedList }) => {
               savedList={savedList}
               listTitle="Saved Journeys"
             />
-
+          <br/>
             <JourneyCardList
               style={{ display: "block" }}
               journeyList={myJourneyList}

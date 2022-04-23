@@ -1,3 +1,4 @@
+
 /* Header */
 #createJourney_btn {
   margin-left: 10px;
@@ -119,7 +120,7 @@
   max-width: 800px;
 }
 
-.card {
+/* .card {
   margin: 2rem auto !important;
   padding: 1.5rem;
   text-align: left;
@@ -130,7 +131,7 @@
   transition: color 0.15s ease, border-color 0.15s ease;
   min-width: none;
   max-width: 750px;
-}
+} */
 
 .logo {
   height: 1em;
@@ -157,10 +158,10 @@
 
 .modalContent {
   background-color: #fefefe;
-  margin: 20% auto;
+  margin: 10% auto;
   padding: 30px 60px;
   border-radius: 10px;
-  width: 80%;
+  width: 100%;
   max-width: 500px;
 }
 
@@ -319,7 +320,9 @@
   font-size: 16px;
   border: 1px solid gray;
   border-radius: 3px;
+
 }
+
 
 .milestone_input_row textarea {
   height: 100px;
@@ -369,4 +372,8 @@
   #createJourney_btn {
     margin: 20px 0;
   }
+}
+
+.shared_journey_card:hover {
+  background-color: #e8e8e8;
 }

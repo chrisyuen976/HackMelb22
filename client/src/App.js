@@ -6,6 +6,7 @@ import Homepage from "./components/Homepage";
 import SavedJourneyPage from "./components/SavedJourneyPage";
 import LoggedHeader from "./components/shared/LoggedHeader";
 import Header from "./components/shared/Header";
+
 import {
   getUser,
   handleSignUp,
@@ -52,7 +53,6 @@ function App() {
   const [journeyList, setJourneyList] = useState([]);
   const [savedJourneys, setSavedJourneys] = useState([]);
   return (
-
     <Router>
       <div>
         {isLoggedIn ? (
@@ -94,7 +94,6 @@ function App() {
         </Routes>
       </div>
     </Router>
-
   );
 }
 
