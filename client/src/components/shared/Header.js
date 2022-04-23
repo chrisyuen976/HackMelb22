@@ -52,6 +52,7 @@ const Header = ({ handleLogin, handleSignUp }) => {
               <Nav.Link href="/saved">Saved Journeys</Nav.Link>
               <Form className="d-flex">
                 <FormControl
+                  name="search"
                   type="search"
                   placeholder="Search"
                   className="me-2"
