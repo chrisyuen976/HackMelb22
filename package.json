@@ -8,8 +8,8 @@
     "npm": "8.5.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "devStart": "nodemon server.js",
+    "start": "node client/server.js",
+    "devStart": "nodemon client/server.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
     "build": "webpack"
   },
