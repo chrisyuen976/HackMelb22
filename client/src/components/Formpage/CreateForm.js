@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import MilestoneCard from "./MilestoneCard";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
-import FormController from "./FormController";
+// import FormController from "./FormController";
 import JourneyForm from "./JourneyForm";
+
+import publishJourney from "./publishJourney";
 
 function CreateForm() {
   //state to track how many milestones added
@@ -21,7 +23,7 @@ function CreateForm() {
       });
     });
     console.log(milestoneArray);
-    if (FormController.publishJourney(title, milestoneArray)){
+    if (publishJourney(title, milestoneArray)){
       window.location.href='/'
     }
  

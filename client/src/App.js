@@ -8,13 +8,16 @@ import LoggedHeader from "./components/shared/LoggedHeader";
 import Header from "./components/shared/Header";
 
 import {
-  getUser,
-  handleSignUp,
-  handleLogin,
-  getAllJourneys,
-  getSavedJourneys,
-  logout,
+  getJourney
 } from "./controllers/clientController";
+
+import handleSignUp from "./controllers/handleSignUp";
+import getAllJourneys from "./controllers/getAllJourneys";
+import getSavedJourneys from "./controllers/getSavedJourneys";
+import getUser from "./controllers/getUser";
+import handleLogin from "./controllers/handleLogin";
+import logout from "./controllers/logout";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import EditForm from "./components/Formpage/EditForm";
 

@@ -1,6 +1,7 @@
-import FormController from "./FormController";
+// import FormController from "./FormController";
 import JourneyForm from "./JourneyForm";
 import {useState} from 'react'
+import editJourney from "./editJourney";
 
 export const EditForm = ({ id, savedMilestones }) => {
   const [title, setTitle] = useState("");
@@ -18,7 +19,7 @@ export const EditForm = ({ id, savedMilestones }) => {
       milestoneArray.push({ milestoneObj });
     });
     console.log(milestoneArray);
-    FormController.editJourney(id, title, milestoneArray);
+    editJourney(id, title, milestoneArray);
   }
 
   return (
