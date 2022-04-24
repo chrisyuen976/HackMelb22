@@ -36,6 +36,6 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-app.listen(process.env.PORT_NUMBER || 3001, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log(`Express is working on port ${port}`);
   });
