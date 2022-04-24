@@ -1,7 +1,12 @@
 require('dotenv').config();
 const path = require("path")
 
-const port = process.env.PORT_NUMBER || 3001;
+// const port = process.env.PORT_NUMBER || 3000;
+
+const server = app.listen(process.env.PORT || 3000, () => {
+    const port = server.address().port;
+    console.log(`Express is working on port ${port}`);
+  });
 
 const express = require('express');
 const mongoose = require('mongoose');
