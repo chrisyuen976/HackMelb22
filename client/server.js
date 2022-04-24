@@ -2,7 +2,7 @@ require('dotenv').config();
 const path = require("path")
 
 // const port = process.env.PORT_NUMBER || 3000;
-const port = process.env.PORT || process.env.PORT_NUMBER;
+const port = process.env.PORT || 3001;
 
 const express = require('express');
 const mongoose = require('mongoose');
