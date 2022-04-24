@@ -17,19 +17,18 @@ app.use(cookieSession({
 }))
 app.use(express.static(path.join(__dirname, "client","build")))
 
-mongoose.connect(process.env.DB_URL)
-    .then((result) => app.listen(port))
+mongoose.connect(process.env.DB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
     .catch((err) => console.error(err))
 
 
-const journeyRouter = require('../routes/journey')
+const journeyRouter = require('./routes/journey')
 app.use('/journey', journeyRouter)
 
-const authRouter = require('../routes/auth')
+const authRouter = require('./routes/auth')
 app.use('/auth', authRouter)
 
 
-const userRouter = require('../routes/user')
+const userRouter = require('./routes/user')
 app.use('/user', userRouter)
 
 app.get("*", (req, res) => {

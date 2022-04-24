@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "devStart": "nodemon server.js",
+    "devStart": "node server.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
     "build": "webpack"
   },
