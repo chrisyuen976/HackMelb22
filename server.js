@@ -1,7 +1,7 @@
 require('dotenv').config();
+const path = require("path")
 
-
-const port = process.env.PORT_NUMBER;
+const port = process.env.PORT_NUMBER || 3001;
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -14,6 +14,7 @@ app.use(cookieSession({
     secret:process.env.COOKIE_KEY,
     httpOnly: true
 }))
+app.use(express.static(path.join(__dirname, "client","build")))
 
 mongoose.connect(process.env.DB_URL)
     .then((result) => app.listen(port))
@@ -30,3 +31,11 @@ app.use('/auth', authRouter)
 
 const userRouter = require('./routes/user')
 app.use('/user', userRouter)
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
+app.listen(port, function(){
+    console.log(`server connected to ${port}`);
+})
