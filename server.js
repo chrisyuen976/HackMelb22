@@ -22,7 +22,6 @@ mongoose.connect(process.env.DB_URL)
     .catch((err) => console.error(err))
 
 
-
 const journeyRouter = require('./routes/journey')
 app.use('/journey', journeyRouter)
 
@@ -37,7 +36,6 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-const server = app.listen(process.env.PORT || 3001, () => {
-    const port = server.address().port;
+app.listen(process.env.PORT_NUMBER || 3001, () => {
     console.log(`Express is working on port ${port}`);
   });
