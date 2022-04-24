@@ -2,14 +2,14 @@
   "name": "melbhackundefined",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "client/src/index.js",
   "engines": {
     "node": "v16.14.2",
     "npm": "8.5.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "devStart": "nodemon server.js",
+    "start": "node app/server.js",
+    "devStart": "nodemon app/server.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
     "build": "webpack"
   },

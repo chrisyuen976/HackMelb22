@@ -22,14 +22,14 @@ mongoose.connect(process.env.DB_URL)
     .catch((err) => console.error(err))
 
 
-const journeyRouter = require('./routes/journey')
+const journeyRouter = require('../routes/journey')
 app.use('/journey', journeyRouter)
 
-const authRouter = require('./routes/auth')
+const authRouter = require('../routes/auth')
 app.use('/auth', authRouter)
 
 
-const userRouter = require('./routes/user')
+const userRouter = require('../routes/user')
 app.use('/user', userRouter)
 
 app.get("*", (req, res) => {
