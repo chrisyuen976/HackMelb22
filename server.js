@@ -22,20 +22,20 @@ mongoose.connect(process.env.DB_URL)
     .catch((err) => console.error(err))
 
 
-const journeyRouter = require('../routes/journey')
+const journeyRouter = require('./routes/journey')
 app.use('/journey', journeyRouter)
 
-const authRouter = require('../routes/auth')
+const authRouter = require('./routes/auth')
 app.use('/auth', authRouter)
 
 
-const userRouter = require('../routes/user')
+const userRouter = require('./routes/user')
 app.use('/user', userRouter)
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-app.listen(process.env.PORT || process.env.PORT_ENV, () => {
+app.listen(process.env.PORT_NUMBER || process.env.PORT, () => {
     console.log(`Express is working on port ${port}`);
   });
