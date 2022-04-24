@@ -3,10 +3,6 @@ const path = require("path")
 
 // const port = process.env.PORT_NUMBER || 3000;
 
-const server = app.listen(process.env.PORT || 3001, () => {
-    const port = server.address().port;
-    console.log(`Express is working on port ${port}`);
-  });
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -41,6 +37,8 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-app.listen(port, function(){
-    console.log(`server connected to ${port}`);
-})
+
+const server = app.listen(process.env.PORT || 3001, () => {
+    const port = server.address().port;
+    console.log(`Express is working on port ${port}`);
+  });
